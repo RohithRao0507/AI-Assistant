@@ -1,0 +1,272 @@
+/* General styling */
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Arial", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode styles */
+.light-mode {
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #121212;
+  color: #f4f4f9;
+}
+
+/* Main container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Top Section */
+.top-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.title-section h1 {
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.logo-section .logo {
+  width: 120px;
+  height: 120px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/* Logo Section */
+.logo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-image {
+  width: 150px;
+  /* Adjust the size as needed */
+  height: 150px;
+  /* Ensure it's proportional */
+  object-fit: cover;
+  /* Ensure the image scales nicely */
+  border-radius: 50%;
+  /* Make it circular if needed */
+  border: 2px solid #007bff;
+  /* Optional border styling */
+}
+
+/* Waveform Animation */
+.wave-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  height: 40px;
+}
+
+.wave {
+  width: 8px;
+  height: 30px;
+  margin: 0 5px;
+  background-color: #007bff;
+  border-radius: 5px;
+  animation: wave-animation 1.2s infinite ease-in-out;
+}
+
+@keyframes wave-animation {
+
+  0%,
+  100% {
+    height: 10px;
+  }
+
+  50% {
+    height: 40px;
+  }
+}
+
+.wave:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.wave:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.wave:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.wave:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.wave:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+
+/* Speaking Animation */
+.speaking-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.speaking-dot {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  background-color: #007bff;
+  border-radius: 50%;
+  animation: speaking 1.5s infinite ease-in-out;
+}
+
+@keyframes speaking {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+
+
+/* Bottom Section */
+.bottom-section {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Input Section */
+.input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.text-input {
+  width: 40%;
+  height: 100px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  resize: none;
+  outline: none;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  /* Center align the text */
+  margin-bottom: 15px;
+  /* Add spacing below the text box */
+}
+
+.light-mode .text-input {
+  background-color: #fff;
+  color: #000;
+}
+
+.dark-mode .text-input {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Button Section */
+.button-section {
+  display: flex;
+  justify-content: center;
+  /* Align buttons horizontally */
+  gap: 10px;
+  /* Add space between buttons */
+}
+
+.submit-button,
+.speak-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.speak-button {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.speak-button.recording {
+  background-color: #f5a623;
+  cursor: not-allowed;
+}
+
+/* Response Section */
+.response-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.response-section h2 {
+  font-size: 20px;
+}
+
+.response-section p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Toggle Button */
+.toggle-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode .toggle-button {
+  background-color: #f5a623;
+  color: #333;
+}
