@@ -1,0 +1,7 @@
+
+### **requirements.txt**
+Flask==2.3.2
+Flask-Cors==3.0.10
+openai==0.27.2
+spotipy==2.22.1
+python-dotenv==1.0.0
